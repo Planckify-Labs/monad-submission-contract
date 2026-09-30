@@ -49,14 +49,14 @@ Deployment record: [`evm/deployments/10143.json`](./evm/deployments/10143.json)
 
 ## Repository Layout
 
-- **`evm/` (Monad Focus):** Solidity implementation built with Foundry. Contains UUPS upgradeable proxies, EIP-712 merchant quote verification, `MockAUSD.sol`, Foundry scripts, and test suites.
-- **`solana/`, `stellar/`, `sui/`:** Counterpart implementations retained to document TakumiPay's multi-chain architecture without modifying original commit history.
+- **`evm/` (Monad Implementation):** Complete Solidity suite built with Foundry, powering TakumiPay's Monad settlements and Agora AUSD allowlisting (`TakumiPay.sol`, `MockAUSD.sol`, deployment scripts, and test suites).
+- **Historical Subdirectories:** Preserved intact to maintain original git commit hashes without rewriting history.
 
 ---
 
 ## Originality & Build Window Disclosure (Section 4.1 #4)
 
-- **Pre-Existing Foundation (Prior to September 1, 2026):** Multi-chain contract architecture and core payment interface specifications.
+- **Pre-Existing Foundation (Prior to September 1, 2026):** Foundational payment-intent specifications and quote verification interfaces.
 - **Built & Deployed During Hackathon (September 16 – September 19, 2026):**
   - EVM Foundry configuration and Monad RPC endpoint integration (`evm/foundry.toml`).
   - `MockAUSD.sol` open-mint testnet token to allow unconstrained consumer payment testing on Monad Testnet (`evm/src/MockAUSD.sol`, `evm/script/DeployMockAUSD.s.sol`).
